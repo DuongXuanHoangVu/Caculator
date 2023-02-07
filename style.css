@@ -1,0 +1,32 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+
+
+
+/* #result{
+    width: 100px;
+    height: 20px;
+}
+
+.result {
+    width: 100%;
+    outline: none;
+} */
+
+.caculator {
+    width: 100%;
+}
+
+.tbody {
+    width: 100%;
+}
+tr {
+    width: 100%;
+}
+
+td button{
+    width: 100%;
+}

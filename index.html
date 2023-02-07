@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="result">
+            <input type="text" name="" id="result">
+        </div>
+        <div class="caculator">
+            <table>
+                <tr>
+                    <td colspan="3"><button id="clear">Clear</button></td>
+                    <td ><button class="btns function-btn" id="divide">/</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btns number">7</button></td>
+                    <td><button class="btns number">8</button></td>
+                    <td><button class="btns number">9</button></td>
+                    <td><button class="btns function-btn" id="multiply">*</button></td> 
+                </tr>
+                <tr>
+                    <td><button class="btns number">4</button></td>
+                    <td><button class="btns number">5</button></td>
+                    <td><button class="btns number">6</button></td>
+                    <td><button class="btns function-btn" id="subtract">-</button></td> 
+                </tr>
+                <tr>
+                    <td><button class="btns number">1</button></td>
+                    <td><button class="btns number">2</button></td>
+                    <td><button class="btns number">3</button></td>
+                    <td><button class="btns function-btn" id="add">+</button></td> 
+                </tr>
+                <tr>
+                    <td colspan="3"><button class="btns number">0</button></td>
+                    <td><button class="show-result">=</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
