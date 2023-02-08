@@ -1,58 +1,26 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
-const btns = $$('.btns')
-const numBtns = $$('.number')
+const btns = $$('.btn')
 const result = $('#result')
-const caculator = $('.caculator')
-const functionBtns = $$('.function-btn')
 
-const add = (a, b) => {
-    return a + b
+btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        result.innerHTML += btn.value
+    })
+});
+
+function clean () {
+    result.innerHTML = ''
 }
 
-const subtract = (a, b) => {
-    return a - b
+function undo () {
+    let res = result.innerHTML
+    result.innerHTML = res.slice(0, res.length - 1)
 }
 
-const multiply = (a, b) => {
-    return a * b
+function equal () {
+    let res = result.innerHTML
+    let output = eval(res)
+    result.innerHTML = output
 }
-
-const divide = (a, b) => {
-    return a / b
-}   
-
-const operate = (fun, a, b) => {
-    return fun(a, b)
-}
-
-const setInputValue = (value) => {
-    result.value = value
-}
-
-const getInputValue = (value) => {
-    return value
-}
-
-
-const handleInputEvent = () => {
-    let a = 0
-    let inputValue = ''
-    numBtns.forEach(btn => {
-        btn.onclick = (e) => {
-            inputValue += btn.textContent
-            setInputValue(inputValue)
-            return getInputValue(inputValue)
-        }
-    });
-}
-
-const app = ()=> {
-    handleInputEvent()
-    console.log(handleInputEvent())
-}
-
-app()
-
-
